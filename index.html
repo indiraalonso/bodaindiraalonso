@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Indira &amp; Alonso — Nos casamos</title>
+
+  <!-- Favicon: corazón en borgoña de la paleta (--ink #6b2232) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236b2232' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" />
+
+  <!-- Meta etiquetas para compartir en WhatsApp y redes sociales -->
+  <meta property="og:title" content="Indira &amp; Alonso" />
+  <meta property="og:description" content="Después de elegirnos cada día, llegó el momento de celebrar nuestra unión" />
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/portada.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="540" />
+  <meta property="og:image:height" content="540" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/portada.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Montserrat:wght@200;300;400;500&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero grain" id="hero">
+    <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__fade" aria-hidden="true"></div>
+    <div class="hero__frame"></div>
+    <span class="hero__corner tl"></span>
+    <span class="hero__corner tr"></span>
+    <span class="hero__corner bl"></span>
+    <span class="hero__corner br"></span>
+
+    <div class="hero__inner">
+      <div class="hero__top reveal">
+        <span>¡Nos Casamos!</span>
+      </div>
+
+      <h1 class="hero__names reveal delay-1">
+        <span class="name">Indira</span><span class="amp">&amp;</span><span class="name">Alonso</span>
+      </h1>
+
+      <button type="button" class="song-btn reveal delay-2" id="songBtn" aria-pressed="false">
+        <i class="fa-solid fa-music" aria-hidden="true"></i>
+        <span class="song-btn__label">Nuestra Canción</span>
+      </button>
+    </div>
+
+    <audio id="songAudio" src="assets/cancion.mp3" loop preload="none"></audio>
+
+    <div class="scroll-cue">
+      <span>Desliza</span>
+      <div class="scroll-arrows">
+        <i class="fa-solid fa-chevron-down"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FECHA / COUNTDOWN ============== -->
+  <section class="countdown-section" id="fecha">
+    <div class="container">
+      <div class="date-box reveal">
+        <div class="col">
+          <div class="num" id="ex-day">28</div>
+          <div class="month" id="ex-month">Noviembre</div>
+        </div>
+        <div class="details">
+          <span class="time-only">5:30 pm<span class="time-end">a 10:30 pm</span></span>
+        </div>
+      </div>
+
+      <div class="reveal delay-1" style="margin-top: 26px;">
+        <button type="button" class="btn btn--dark" id="addToCalendar" data-hover>
+          <i class="fa-regular fa-calendar-plus" style="margin-right: 8px;"></i>
+          Agregar al calendario
+        </button>
+      </div>
+
+      <div class="reveal delay-1">
+        <div class="ornament" style="margin-top: 40px; margin-bottom: 30px;">
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <p class="invite-quote reveal delay-2">
+        Después de elegirnos cada día, llegó el momento de celebrar
+        nuestra unión
+      </p>
+
+      <div class="countdown-label reveal delay-3">Faltan</div>
+
+      <div class="countdown reveal delay-4" id="countdown">
+        <div class="countdown__cell">
+          <span class="countdown__num" data-days>00</span>
+          <span class="countdown__lbl">Días</span>
+        </div>
+        <div class="countdown__cell">
+          <span class="countdown__num" data-hours>00</span>
+          <span class="countdown__lbl">Hrs</span>
+        </div>
+        <div class="countdown__cell">
+          <span class="countdown__num" data-mins>00</span>
+          <span class="countdown__lbl">Min</span>
+        </div>
+        <div class="countdown__cell">
+          <span class="countdown__num" data-secs>00</span>
+          <span class="countdown__lbl">Seg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SECTION 01 — LOCATION (text left / image right) ============== -->
+  <section class="section" id="ubicacion">
+    <div class="split split--reverse">
+      <div class="split__media reveal bg-img-1" data-hover>
+        <span class="badge">Capítulo I</span>
+      </div>
+      <div class="split__text reveal reveal--left delay-2">
+        <div class="section-num">Capítulo Uno</div>
+        <h2 class="section-title">La Celebración</h2>
+
+        <div class="venues">
+          <div class="venue">
+            <div class="venue__name">Le Chandelier</div>
+          </div>
+        </div>
+
+        <a href="https://waze.com/ul?q=Le%20Chandelier&navigate=yes" target="_blank" rel="noopener" class="btn btn--dark" data-hover>
+          <i class="fa-solid fa-location-dot" style="margin-right: 8px;"></i>
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DRESS CODE ============== -->
+  <section class="dresscode" id="dresscode">
+    <div class="container">
+      <div class="eyebrow reveal">— Código de Vestimenta —</div>
+
+      <div class="reveal delay-1">
+        <div class="ornament">
+          <span class="line"></span>
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="dresscode__title reveal delay-1">Formal</div>
+
+      <p class="dresscode__msg reveal delay-2">
+        Vístete con elegancia y acompáñanos a celebrar este gran momento.
+      </p>
+
+      <div class="dresscode__avoid reveal delay-2">
+        <div class="avoid-label"><i class="fa-solid fa-ban"></i> Colores a evitar</div>
+        <div class="avoid-chips">
+          <span class="avoid-chip"><span class="sw" style="background:#ffffff;"></span>Blanco</span>
+          <span class="avoid-chip"><span class="sw" style="background:#efe7d8;"></span>Marfil</span>
+          <span class="avoid-chip"><span class="sw" style="background:#722f37;"></span>Vino</span>
+        </div>
+        <p class="avoid-note">
+          Reservados para la novia, junto con cualquier tono muy
+          similar a su vestido.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== RSVP (text left / image right) ============== -->
+  <section class="section rsvp" id="rsvp">
+    <div class="split">
+      <div class="split__media reveal bg-img-2" data-hover>
+        <span class="badge">Capítulo II</span>
+      </div>
+      <div class="split__text reveal reveal--right delay-2">
+        <div class="section-num">Capítulo Dos</div>
+        <h2 class="section-title">¿Nos <em>acompañas?</em></h2>
+        <p class="rsvp__deadline">Por favor confirma tu asistencia.</p>
+
+                <form class="form" id="formulario-rsvp">
+
+          <div id="rsvp-invitation-text" class="rsvp-invitation-text" style="display:none;">
+            <p><span class="line-1">Hemos reservado</span> <span class="line-2"><strong id="reservados-count">#</strong> para ti</span></p>
+          </div>
+
+          <p class="rsvp__deadline-note">
+            <i class="fa-regular fa-clock"></i>
+            Fecha límite: <span id="rsvp-deadline-date"></span>
+          </p>
+
+          <div class="campo-formulario" id="wrap-campo-1">
+            <label for="campo-1">Nombre Completo</label>
+            <input type="text" id="campo-1" name="Nombre Completo" placeholder="Nombre y apellido…">
+          </div>
+
+          <div class="campo-formulario" id="wrap-campo-2">
+            <label for="campo-2">Asistencia</label>
+            <div class="choice-buttons" id="choice-campo-2">
+              <button type="button" class="choice-btn" data-value="Asistiré">Asistiré</button>
+              <button type="button" class="choice-btn" data-value="No asistiré">No asistiré</button>
+            </div>
+            <input type="hidden" id="campo-2" name="Asistencia">
+          </div>
+
+          <div class="campo-formulario conditional-field" id="wrap-campo-3" data-role="cantidad" data-target="campo-2" data-affirm="Asistiré" style="display:none;">
+            <label for="campo-3">Cantidad de personas</label>
+            <div class="choice-buttons qty-buttons" id="choice-campo-3"></div>
+            <input type="hidden" id="campo-3" name="Cantidad de personas" value="1">
+          </div>
+
+          <p class="form-error" id="form-error" role="alert"></p>
+
+          <button type="button" class="btn btn--dark" id="btn-enviar" data-hover>Confirmar</button>
+        </form>
+
+        <div id="mensaje-plazo-finalizado" class="deadline-message" style="display:none;">
+          <i class="fa-solid fa-hourglass-end"></i>
+          <h3>Plazo Finalizado</h3>
+          <p>El plazo para confirmar asistencia ha finalizado.</p>
+        </div>
+
+        <div id="mensaje-exito" style="display:none;">
+          ¡Muchas gracias! Tu confirmación se ha guardado correctamente.
+        </div>
+
+        <div class="rsvp__adults">
+          <i class="fa-solid fa-gift"></i>
+          <p>
+            Lo más importante para nosotros es compartir este momento rodeados
+            de las personas que queremos.
+          </p>
+          <p>
+            Si además desean hacernos un obsequio, agradeceremos con mucho
+            cariño cualquier detalle mediante transferencia o Sinpe Móvil.
+          </p>
+          <div class="gift-accounts">
+            <div class="gift-accounts__row">
+              <span class="gift-accounts__label">BAC</span>
+              <span class="gift-accounts__value">931162085</span>
+            </div>
+            <div class="gift-accounts__row">
+              <span class="gift-accounts__label">Sinpe</span>
+              <span class="gift-accounts__value">70029097</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOTO FINAL (solo móvil) ============== -->
+  <section class="closing-photo" aria-hidden="true">
+    <div class="split__media closing-photo__media">
+      <span class="badge">Indira &amp; Alonso</span>
+    </div>
+  </section>
+
+  <footer>
+    <div>Con todo nuestro cariño, Indira &amp; Alonso</div>
+  </footer>
+
+  <script src="js/script.js?v=1"></script>
+</body>
+
+
+</html>
