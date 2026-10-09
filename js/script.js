@@ -159,6 +159,7 @@ const GUEST_LIST = [
   { nombre: "Jorge Campos", espacios: 2 },
   { nombre: "Melissa Kaine", espacios: 1 },
   { nombre: "Martha Chacon", espacios: 1 },
+  { nombre: "Gerardo Soto", espacios: 2 },
   { nombre: "Alonso Vargas", espacios: 4 }
 ];
 
