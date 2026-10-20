@@ -150,7 +150,7 @@ setInterval(tick, 1000);
    confirmados. Actualiza esta lista si cambian los invitados. */
 const GUEST_LIST = [
   { nombre: "Priscilla Chinchilla", espacios: 2 },
-  { nombre: "Nuria Solano", espacios: 5 },
+  { nombre: "Nuria Solano", espacios: 2 },
   { nombre: "Vanessa Fernandez", espacios: 1 },
   { nombre: "Lilliana Fonseca", espacios: 2 },
   { nombre: "Cesar Chacon", espacios: 2 },
@@ -160,6 +160,7 @@ const GUEST_LIST = [
   { nombre: "Melissa Kaine", espacios: 1 },
   { nombre: "Martha Chacon", espacios: 1 },
   { nombre: "Gerardo Soto", espacios: 2 },
+  { nombre: "Maria Jose Varela", espacios: 2 },
   { nombre: "Alonso Vargas", espacios: 4 }
 ];
 
